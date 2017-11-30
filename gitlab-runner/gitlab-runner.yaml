@@ -273,6 +273,9 @@ objects:
             httpGet:
               path: /minio/login
               port: 9000
+              httpHeaders:
+              - name: User-Agent
+                value: Mozilla
             initialDelaySeconds: 15
             timeoutSeconds: 10
           name: cnt-minio
